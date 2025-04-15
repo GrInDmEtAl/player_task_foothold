@@ -32,7 +32,7 @@ taskmanager:SetMenuName("Eagle Eye")
 
 -- accept-zones for detection
 
--- Not tested
+--  tested worked
 local Zones_MA_circle = {
     "Akrotiri",
     "Paphos",
@@ -99,30 +99,25 @@ local Zones_MA_circle = {
     "Ramat David Defence",
     "Jordan Defence",
     "Incirlik Defence",
-    "Silkworm Site"
+    "Silkworm Site",
+    "FOB Lima",
+    "Abu al-Duhur",
+    "Damascus",
+    "Beirut",
+    "Radio Tower",
+    "November",
+    "Romeo",
+    "Red Carrier",
+    "Refinery",
+    "FOB Mike"
 }
 
 
     -- "Carrier Group",
 
-
--- ZONE_POLYGON  == not tested ==
--- local Zones_MA_POLYGON = {
-    -- "FOB Lima",
-    -- "Abu al-Duhur",
-    -- "Damascus",
-    -- "Beirut",
-    -- "Radio Tower",
-    -- "November",
-    -- "Romeo",
-    -- "Red Carrier",
-    -- "Refinery",
-    -- "FOB Mike"
--- }
-
-taskmanager:AddAcceptZone(ZONE:New(Zones_MA_circle))  --using global zone around map named AcceptZone in ME
--- taskmanager:AddAcceptZone(ZONE:FindByName(Zones_MA_circle))
--- taskmanager:AddAcceptZoneSet(Zones_MA_circle)
+for _, zoneName in ipairs(Zones_MA_circle) do
+  taskmanager:AddAcceptZone( ZONE:New(zoneName) )
+end
 
 -- auto-add map markers when tasks are added
 function taskmanager:OnAfterTaskAdded(From,Event,To,Task)
