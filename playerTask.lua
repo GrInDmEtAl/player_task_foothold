@@ -2,9 +2,9 @@
 -- Example used https://github.com/FlightControl-Master/MOOSE_MISSIONS/blob/develop/Ops/PlayerTask/PlayerTask%20-%20020%20-%20Detection/PlayerTask%20-%20020%20-%20Detection.lua
 -------------------------------------------------------------------------
 -- Documentation
--- 
+--  
 -- PLAYERTASK: https://flightcontrol-master.github.io/MOOSE_DOCS_DEVELOP/Documentation/Ops.PlayerTask.html
--- 
+--  Need Limit range detections 
 -------------------------------------------------------------------------
 
 -- Settings
@@ -31,7 +31,7 @@ taskmanager:SetMenuName("Eagle Eye")
 
 -- accept-zones for detection
 
--- Not tested
+-- Not tested 
 -- local Zones_MA = {
     -- "zone1",
     -- "zone1",
