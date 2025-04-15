@@ -120,8 +120,8 @@ local Zones_MA_circle = {
     -- "FOB Mike"
 -- }
 
--- taskmanager:AddAcceptZone(ZONE:New(Zones_MA_circle))  --using global zone around map named AcceptZone in ME
-taskmanager:AddAcceptZone(ZONE:FindByName(Zones_MA_circle))
+taskmanager:AddAcceptZone(ZONE:New(Zones_MA_circle))  --using global zone around map named AcceptZone in ME
+-- taskmanager:AddAcceptZone(ZONE:FindByName(Zones_MA_circle))
 -- taskmanager:AddAcceptZoneSet(Zones_MA_circle)
 
 -- auto-add map markers when tasks are added
