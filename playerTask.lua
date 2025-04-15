@@ -33,7 +33,7 @@ taskmanager:SetMenuName("Eagle Eye")
 -- accept-zones for detection
 
 -- Not tested
-local Zones_MA = {
+local Zones_MA_circle = {
     "Akrotiri",
     "Paphos",
     "Polis",
@@ -49,7 +49,6 @@ local Zones_MA = {
     "Taftanaz",
     "Jirah",
     "Tabqa",
-    "Abu al-Duhur",
     "Bassel Al-Assad",
     "Hama",
     "Palmyra",
@@ -58,19 +57,14 @@ local Zones_MA = {
     "Bravo",
     "Charlie",
     "Delta",
-    "Red Carrier",
     "Foxtrot",
     "Golf",
     "Hotel",
     "India",
     "Juliett",
-    "Kilo"
-    "FOB Lima",
-    "FOB Mike",
-    "November",
+    "Kilo",
     "Oscar",
     "Papa",
-    "Romeo",
     "Sierra",
     "Tango",
     "Uniform",
@@ -82,18 +76,13 @@ local Zones_MA = {
     "TV Tower",
     "SA-5",
     "Military Base",
-    "Carrier Group",
-    "Refinery",
     "Factory",
     "Substation West",
-    "Radio Tower",
     "Rene Mouawad",
     "Wujah",
-    "Beirut",
     "Rayak",
     "Al Qusayr",
     "Tiyas",
-    "Damascus",
     "An Nasiriyah",
     "Thalah",
     "King Hussein Air College",
@@ -110,13 +99,30 @@ local Zones_MA = {
     "Ramat David Defence",
     "Jordan Defence",
     "Incirlik Defence",
-    "Silkworm Site",
-    "Hidden1",
-    "Hidden2"
+    "Silkworm Site"
 }
-taskmanager:AddAcceptZone(ZONE:New(Zones_MA))  --using global zone around map named AcceptZone in ME
--- taskmanager:AddAcceptZone(ZONE:New("AcceptZone"))  --using global zone around map named AcceptZone in ME
--- taskmanager:AddAcceptZone(ZONE:FindByName("AcceptZone"))
+
+
+    -- "Carrier Group",
+
+
+-- ZONE_POLYGON  == not tested ==
+-- local Zones_MA_POLYGON = {
+    -- "FOB Lima",
+    -- "Abu al-Duhur",
+    -- "Damascus",
+    -- "Beirut",
+    -- "Radio Tower",
+    -- "November",
+    -- "Romeo",
+    -- "Red Carrier",
+    -- "Refinery",
+    -- "FOB Mike"
+-- }
+
+-- taskmanager:AddAcceptZone(ZONE:New(Zones_MA_circle))  --using global zone around map named AcceptZone in ME
+taskmanager:AddAcceptZone(ZONE:FindByName(Zones_MA_circle))
+-- taskmanager:AddAcceptZoneSet(Zones_MA_circle)
 
 -- auto-add map markers when tasks are added
 function taskmanager:OnAfterTaskAdded(From,Event,To,Task)
